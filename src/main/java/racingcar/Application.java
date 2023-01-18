@@ -2,7 +2,6 @@ package racingcar;
 
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.List;
 import camp.nextstep.edu.missionutils.Console;
 
 
@@ -24,7 +23,7 @@ public class Application {
         }
 
 
-        game.MoveNTimes();
+        game.moveNTimes();
         game.printWinner();
 
     }

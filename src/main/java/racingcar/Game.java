@@ -1,12 +1,10 @@
 package racingcar;
 
 import camp.nextstep.edu.missionutils.Console;
-import org.mockito.internal.matchers.NotNull;
 
-import java.lang.reflect.Array;
+
 import java.util.ArrayList;
-import java.util.List;
-import java.util.Optional;
+
 
 public class Game {
 
@@ -53,14 +51,14 @@ public class Game {
         }
     }
 
-    public void MoveOneTime(){
+    public void moveOneTime(){
 
         try{
             int NumOfCar = carList.size();
 
             for(int i=0;i<NumOfCar;i++){
                 System.out.print(carList.get(i).getName()+" : ");
-                carList.get(i).canImove();
+                carList.get(i).canIMove();
                 System.out.println("");
             }
         }catch(NullPointerException e){
@@ -70,10 +68,10 @@ public class Game {
 
     }
 
-    public void MoveNTimes(){
+    public void moveNTimes(){
         try{
             for(int i=0;i<this.gameNum;i++){
-                MoveOneTime();
+                moveOneTime();
             }
         }catch (NullPointerException e){
             e.printStackTrace();
@@ -103,7 +101,7 @@ public class Game {
         try{
             ArrayList<String> winner = new ArrayList<String>();
             winner = getWinner();
-            System.out.print("최종우승자 : ");
+            System.out.print("최종 우승자 : ");
             for(int i=0;i<winner.size();i++){
                 System.out.print(winner.get(i)+" ");
             }

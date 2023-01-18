@@ -1,7 +1,6 @@
 package racingcar;
 
 import camp.nextstep.edu.missionutils.Randoms;
-import camp.nextstep.edu.missionutils.Console;
 
 public class Car {
     private final String name;
@@ -14,7 +13,7 @@ public class Car {
     // 추가 기능 구현
 
     // random 숫자가 4이상이면 move한다 --> randomnum 출력
-    public void canImove(){
+    public void canIMove(){
         int rannum = Randoms.pickNumberInRange(0,9);
         if(rannum>=4) {
             forward();
